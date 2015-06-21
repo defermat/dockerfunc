@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 dkr () {
     if [[ "$1" == "which" ]]; then
         docker-machine active

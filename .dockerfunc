@@ -1,0 +1,10 @@
+dkr () {
+    if [[ "$1" == "which" ]]; then
+        docker-machine active
+        return
+    fi
+    if [[ "$1" == "use" ]]; then
+        eval "$(docker-machine env ${*:2})"
+        return
+    fi
+}
